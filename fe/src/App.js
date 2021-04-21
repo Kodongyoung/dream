@@ -1,25 +1,18 @@
-import logo from './logo.svg';
-import './App.css';
+import React, {useState} from 'react'
+import {Route} from 'react-router-dom'
+import Home from './common/Home'
+import ChatAdd from './chat/ChatAdd'
+import ChatList from './chat/ChatList'
+import ChatDetail from './chat/ChatDetail'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+const App = () => {
+  return(<>
+  <Route path="/" component={Home} exact/>
+  <Route path="/ChatAdd" component={ChatAdd} />
+  <Route path="/ChatList" component={ChatList} />
+  <Route path="/ChatDetail/:id" component={ChatDetail} /> 
+
+  </>)
 }
 
-export default App;
+export default App

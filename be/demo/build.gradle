@@ -20,6 +20,18 @@ dependencies {
 	implementation group: 'org.mariadb.jdbc', name: 'mariadb-java-client', version: '2.7.2'
 	compileOnly group: 'org.projectlombok', name: 'lombok', version: '1.18.18'
 	implementation group: 'org.springframework.boot', name: 'spring-boot-starter-data-jpa', version: '2.4.4'
+	implementation group: 'org.springframework.boot', name: 'spring-boot-starter-web', version: '2.4.4'
+	implementation group: 'com.googlecode.json-simple', name: 'json-simple', version: '1.1.1'
+	
+  compile('org.springframework.boot:spring-boot-starter-mustache')
+  compile('org.springframework.boot:spring-boot-starter-web')
+  compile('org.springframework.boot:spring-boot-starter-websocket')
+  compile('org.webjars.bower:jquery:3.3.1')
+  compile('org.webjars:sockjs-client:1.1.2')
+  compile('org.webjars:webjars-locator:0.30')
+  runtime('org.springframework.boot:spring-boot-devtools')
+  compileOnly('org.projectlombok:lombok')
+  testCompile('org.springframework.boot:spring-boot-starter-test')
 }
 test {
 	useJUnitPlatform()
